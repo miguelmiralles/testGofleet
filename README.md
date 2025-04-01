@@ -1,59 +1,88 @@
 # TestGofleet
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
 
-## Development server
+## Local Setup
 
-To start a local development server, run:
+### Prerequisites
 
-```bash
-ng serve
-```
+- Node.js (version 16.x or higher)
+- npm (version 8.x or higher)
+- Angular CLI (`npm install -g @angular/cli`)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Installation Steps
 
-## Code scaffolding
+1. Clone the repository:
+   ```bash
+   git clone [repository-URL]
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd TestGofleet
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   ng serve
+   ```
+5. Open your browser at `http://localhost:4200`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Development
 
-```bash
-ng generate component component-name
-```
+### Development server
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-```bash
-ng generate --help
-```
+### Code scaffolding
 
-## Building
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-To build the project run:
+### Build
 
-```bash
-ng build
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+NOTE: `ng build --prod` is deprecated. Use `ng build --configuration production` instead for production builds.
 
-## Running unit tests
+## Main Components
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Core Module
+- **Description**: Contains essential application-wide services, interfaces, and mock data:
+  - **Services**: Submissions service for managing form submissions data.
+  - **Models**: Interfaces for submissions, locations, and query parameters.
+  - **Enums**: Status definitions (InReview, Completed, Uncompleted).
+  - **Mocks**: Mock data generator for submissions with randomized locations in Toronto area.
 
-```bash
-ng test
-```
+### Features Module
+- **Description**: Contains the main application components for submission management
+  - **SubmissionsList**: Main component that displays the submissions list with filters and map/list view.
+  - **MapLists**: Component that integrates Google Maps with the submissions list.
+  - **SubmissionItem**: Reusable component that displays detailed information for each submission.
+  - **Key features**:
+    - Dual visualization (map/list)
+    - Search filters
+    - CSV export
+    - Google Maps integration
 
-## Running end-to-end tests
+## Other Components
 
-For end-to-end (e2e) testing, run:
+### Layout Components
 
-```bash
-ng e2e
-```
+- **Description**: 
+    - **LayoutComponent**: Main layout wrapper that structures the application's base template.
+    - **HeaderComponent**: Navigation header component displaying the main menu and user controls.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Shared Components
 
-## Additional Resources
+#### SVG Icon Component
+- **Description**: A reusable component that renders SVG icons from the assets folder and supports customizable dimensions through inputs.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Notes
+
+- This project uses the latest version of Angular (v19+) and follows current Angular team recommendations:
+  - **Signals** for reactive state management
+  - **Standalone Components** for better modularity
+  - **Control Flow** syntax (`@if`, `@for`)
+  - **Required Inputs** for better component contracts

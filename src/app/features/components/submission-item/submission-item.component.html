@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header">
+    <span class="text-h5">Work Flow: Requires Location</span>
+    <span class="badge-status text-p4" [class]="getStatusClass()">
+      <gofleet-svg-icon 
+        [name]="getStatusIcon()" 
+        width="20" 
+        height="20">
+      </gofleet-svg-icon>
+      {{ getStatusText() }}
+    </span>
+  </div>
+  <div class="card-details">
+    <div class="detail-row">
+      <span class="text-p2 text-black-borders">From:</span>
+      <span class="text-p3 text-color-black-heading">{{ submission().from }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="text-p2 text-black-borders">To:</span>
+      <span class="text-p3 text-color-black-heading">{{ submission().to }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="text-p2 text-black-borders">Due Date:</span>
+      <span class="text-p3 text-color-error">{{ submission().dueDate | date: 'dd/MM/yyyy' }}</span>
+    </div>
+  </div>
+</div>

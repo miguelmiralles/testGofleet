@@ -1,0 +1,48 @@
+.card {
+  padding: 16px;
+  border-radius: 4px;
+  border-width: 1px;
+  background: #ffffff;
+  border: 1px solid #b8b9bc;
+  margin-bottom: 8px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-row {
+  display: flex;
+  gap: 8px;
+}
+.badge-status {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  gap: 8px;
+  padding: 2px 16px;
+  border-radius: 4px;
+  &.status-completed {
+    border: 1px solid #53d86a;
+    color: #53d86a;
+    background: #D7E5DA;
+  }
+  &.status-uncompleted {
+    border: 1px solid #ff3d00;
+    color: #ff3d00;
+    background: #ff3d001a;
+  }
+  &.status-in-review {
+    border: 1px solid #b8b9bc;
+    color: #b8b9bc;
+    background: #ECECED;
+  }
+}

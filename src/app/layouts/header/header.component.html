@@ -1,0 +1,37 @@
+<header class="toolbar">
+    <span class="brand">
+        ZenduForms
+    </span>
+    <nav class="toolbar-items">
+        <a href="#" class="nav-item" [class.active]="tabActive() === 'forms'" (click)="updateNavActive('forms')">
+            <span class="material-icons">format_list_bulleted</span>
+            Forms
+        </a>
+        <a href="#" class="nav-item" [class.active]="tabActive() === 'customers'"
+            (click)="updateNavActive('customers')">
+            <span class="material-icons">people</span>
+            Customers
+        </a>
+        <a href="#" class="nav-item" [class.active]="tabActive() === 'submissions'"
+            (click)="updateNavActive('submissions')">
+            <span class="material-icons">graphic_eq</span>
+            Submissions
+        </a>
+        <a href="#" class="nav-item" [class.active]="tabActive() === 'history'" (click)="updateNavActive('history')">
+            <span class="material-icons">history</span>
+            History
+        </a>
+        <a href="#" class="nav-item" [class.active]="tabActive() === 'reports'" (click)="updateNavActive('reports')">
+            <span class="material-icons">insert_chart_outlined</span>
+            Reports
+        </a>
+        <a href="#" class="nav-item" [class.active]="tabActive() === 'workflow'" (click)="updateNavActive('workflow')">
+            <span class="material-icons">insert_chart_outlined</span>
+            Workflow
+        </a>
+    </nav>
+    <span class="user-info">
+        <span class="material-icons">notifications</span>
+        <span class="material-icons">logout</span>
+    </span>
+</header>

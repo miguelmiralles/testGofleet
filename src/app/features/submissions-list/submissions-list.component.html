@@ -1,0 +1,69 @@
+<section class="container">
+    <h1 class="title">Submissions</h1>
+    <div class="containers-actions">
+
+        <div class="filters-container">
+            <form [formGroup]="filtersForm">
+                <div class="form-field">
+                    <div class="search-input">
+                        <span class="material-icons">search</span>
+                        <input class="text-p3" type="text" formControlName="search" placeholder="Search...">
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <select class="custom-select" formControlName="form">
+                        <option value="">Select From</option> @for (form of forms; track form.id) {
+                        <option [value]="form.id">{{ form.name }}</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <select class="custom-select" formControlName="status">
+                        <option value="">Select Status</option>
+                        @for (status of statuses; track status.id) {
+                        <option [value]="status.id">{{ status.name }}</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <input class="custom-input" type="date" formControlName="date">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="view-controls">
+            <div class="toggle-group">
+                <div class="slider" [class.right]="currentView === 'list'"></div>
+                <button class="text-p3" (click)="currentView = 'map'"
+                    [class.active]="currentView === 'map'">Map</button>
+                <button class="text-p3" (click)="currentView = 'list'"
+                    [class.active]="currentView === 'list'">List</button>
+            </div>
+
+            <button class="export-button" (click)="exportData()">
+                <span class="material-icons">download</span>
+                Exportar
+            </button>
+        </div>
+    </div>
+
+    <div class="container-data">
+        @if (!submissions.length) {
+        <div class="empty-state">
+            <p>No submissions found</p>
+        </div>
+        } @else {
+        @if (currentView === 'map') {
+        <gofleet-map-lists [submissions]="submissions"></gofleet-map-lists>
+        } @else if (currentView === 'list') {
+        <div class="text-not-implemented">
+            NOT IMPLEMENTED
+        </div>
+        }
+        }
+    </div>
+</section>

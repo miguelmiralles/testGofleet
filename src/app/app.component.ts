@@ -2,11 +2,9 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'gofleet-root',
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'test-gofleet';
-}
+export class AppComponent {}

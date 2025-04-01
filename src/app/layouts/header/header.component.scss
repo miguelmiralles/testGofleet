@@ -1,0 +1,53 @@
+.toolbar {
+  display: flex;
+  background-color: #2188d9;
+  height: 72px;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 32px;
+  padding-left: 32px;
+  color: white;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: 2%;
+  vertical-align: middle;
+  width: 198px;
+  height: 45.25px;
+}
+
+.toolbar-items {
+  display: flex;
+  overflow: scroll;
+  height: 72px;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  width: 116px;
+  height: 72px;
+  padding-right: 16px;
+  padding-left: 16px;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    background-color: rgba(197, 197, 197, 0.1);
+  }
+  &.active {
+    background-color: #1773bb;
+  }
+}
+
+.user-info {
+  display: flex;
+  width: 102px;
+  gap: 16px;
+}

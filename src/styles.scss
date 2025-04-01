@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.text-h5 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.text-p2 {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.text-p3 {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+.text-p4 {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;    
+}
+.text-color-black-heading {
+    color: #060C1B;
+}
+
+.text-black-borders {
+    color: #B8B9BC;
+}
+.text-color-error {
+    color: #FF3D00;
+}
