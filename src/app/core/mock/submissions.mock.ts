@@ -38,7 +38,7 @@ export const SUBMISSIONS_MOCK: ISubmission[] = Array.from({ length: 50 }, (_, in
         longitude: -79.60416181242202 + ( (Math.random() * 2 - 1) * 0.1),
         address: `${index + 1} Main St, Toronto, ON`
     },
-    status: statuses[index % 3]
+    status: statuses[Math.floor(Math.random() * statuses.length)]
 }));
 
 export const SENDERS_MOCK: string[] = senders;

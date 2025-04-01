@@ -21,10 +21,28 @@
 
 .toolbar-items {
   display: flex;
-  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
   height: 72px;
   gap: 16px;
   align-items: center;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .nav-item {
